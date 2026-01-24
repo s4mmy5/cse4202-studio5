@@ -1,0 +1,1 @@
+cmd_/build/cse4202-studio5/modules/family_reader.ko := arm-linux-gnueabihf-ld -r -EL --build-id=sha1  -T scripts/module.lds -o /build/cse4202-studio5/modules/family_reader.ko /build/cse4202-studio5/modules/family_reader.o /build/cse4202-studio5/modules/family_reader.mod.o;  true
