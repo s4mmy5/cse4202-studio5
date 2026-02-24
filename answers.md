@@ -37,6 +37,8 @@ sammy@mikey:~ $ wc -l out
 ```
 
 4. kobject_example:
+
+foo:
 ```
 root@mikey:/sys/kernel/kobject_example# cat foo
 0
@@ -44,11 +46,30 @@ root@mikey:/sys/kernel/kobject_example# echo 42 > foo
 root@mikey:/sys/kernel/kobject_example# cat foo
 42
 root@mikey:/sys/kernel/kobject_example# dmesg
-[  170.868408] kobject_example: loading out-of-tree module taints kernel.
 [  293.433267] foo value being updated (OLD=0, NEW=42)
-root@mikey:/sys/kernel/kobject_example#
 ```
 
+baz:
+```
+root@mikey:/sys/kernel/kobject_example# echo baz
+baz
+root@mikey:/sys/kernel/kobject_example# echo 42 > baz
+root@mikey:/sys/kernel/kobject_example# cat baz
+42
+root@mikey:/sys/kernel/kobject_example# dmesg
+[  119.100067] baz value being updated (OLD=0, NEW=42)
+```
+
+bar:
+```
+root@mikey:/sys/kernel/kobject_example# cat bar
+0
+root@mikey:/sys/kernel/kobject_example# echo 42 > bar
+root@mikey:/sys/kernel/kobject_example# cat bar
+42
+root@mikey:/sys/kernel/kobject_example# dmesg
+[ 4001.870364] bar value being updated (OLD=0, NEW=42)
+```
 5. family_reader module:
 ```
 [ 1834.667364] family_reader: loading out-of-tree module taints kernel.

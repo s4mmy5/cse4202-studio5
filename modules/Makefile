@@ -1,1 +1,1 @@
-obj-m := kobject-example.c
+obj-m := kobject-example.o
