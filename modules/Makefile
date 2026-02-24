@@ -1,1 +1,1 @@
-obj-m := family_reader.o
+obj-m := kobject-example.c
